@@ -138,23 +138,20 @@ non_interactive = true
 allow_redefinition = true
 no_strict_optional = true
 
-[tool.mypy.podman.api.client]
-ignore_errors = true
+exclude = '''
+(
+    ^contrib/.*
+)
+'''
 
-[tool.mypy.podman.domain.manager]
-ignore_errors = true
-
-[tool.mypy.podman.api.tar_utils]
-ignore_errors = true
-
-[tool.mypy.podman.api.uds]
-ignore_errors = true
-
-[tool.mypy.podman.domain.images_build]
-ignore_errors = true
-
-[tool.mypy.podman.domain.pods]
-ignore_errors = true
-
-[tool.mypy.podman.domain.registry_data]
+[[tool.mypy.overrides]]
+module = [
+    "podman.api.client",
+    "podman.domain.manager",
+    "podman.api.tar_utils",
+    "podman.api.uds",
+    "podman.domain.images_build",
+    "podman.domain.pods",
+    "podman.domain.registry_data"
+]
 ignore_errors = true
