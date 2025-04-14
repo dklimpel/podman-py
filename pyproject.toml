@@ -146,11 +146,21 @@ exclude = '''
 
 [[tool.mypy.overrides]]
 module = [
+	"contrib",
+    "podman.api.adapter_utils",
+    "podman.api.cached_property",
     "podman.api.client",
     "podman.domain.manager",
+    "podman.api.ssh",
     "podman.api.tar_utils",
     "podman.api.uds",
+    "podman.domain.config",
+    "podman.domain.containers",
+    "podman.domain.containers_create",
+    "podman.domain.containers_run",
     "podman.domain.images_build",
+    "podman.domain.images_manager",
+    "podman.domain.manifests",
     "podman.domain.pods",
     "podman.domain.registry_data"
 ]
