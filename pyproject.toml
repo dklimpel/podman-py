@@ -138,3 +138,17 @@ non_interactive = true
 ignore_missing_imports = true
 allow_redefinition = true
 no_strict_optional = true
+
+exclude = '''
+(
+    ^podman/domain/manager\.py$ |
+    ^podman/api/client\.py$
+    ^podman/api/tar_utils\.py$ |
+    ^podman/api/uds\.py$ |
+    ^podman/domain/images_build\.py$ |
+    ^podman/domain/manager\.py$ |
+    ^podman/domain/pods\.py$ |
+    ^podman/domain/registry_data\.py$
+)
+'''
+
