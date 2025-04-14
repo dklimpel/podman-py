@@ -135,20 +135,26 @@ builtins-ignorelist = ["copyright", "all"]
 [tool.mypy]
 install_types = true
 non_interactive = true
-ignore_missing_imports = true
 allow_redefinition = true
 no_strict_optional = true
 
-exclude = '''
-(
-    ^podman/domain/manager\.py$ |
-    ^podman/api/client\.py$ |
-    ^podman/api/tar_utils\.py$ |
-    ^podman/api/uds\.py$ |
-    ^podman/domain/images_build\.py$ |
-    ^podman/domain/manager\.py$ |
-    ^podman/domain/pods\.py$ |
-    ^podman/domain/registry_data\.py$ |
-    ^contrib/.*
-)
-'''
+[tool.mypy.podman.api.client]
+ignore_errors = true
+
+[tool.mypy.podman.domain.manager]
+ignore_errors = true
+
+[tool.mypy.podman.api.tar_utils]
+ignore_errors = true
+
+[tool.mypy.podman.api.uds]
+ignore_errors = true
+
+[tool.mypy.podman.domain.images_build]
+ignore_errors = true
+
+[tool.mypy.podman.domain.pods]
+ignore_errors = true
+
+[tool.mypy.podman.domain.registry_data]
+ignore_errors = true
