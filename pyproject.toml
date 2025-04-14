@@ -142,7 +142,7 @@ no_strict_optional = true
 exclude = '''
 (
     ^podman/domain/manager\.py$ |
-    ^podman/api/client\.py$
+    ^podman/api/client\.py$ |
     ^podman/api/tar_utils\.py$ |
     ^podman/api/uds\.py$ |
     ^podman/domain/images_build\.py$ |
