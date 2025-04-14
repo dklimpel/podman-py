@@ -138,15 +138,9 @@ non_interactive = true
 allow_redefinition = true
 no_strict_optional = true
 
-exclude = '''
-(
-    ^contrib/.*
-)
-'''
-
 [[tool.mypy.overrides]]
 module = [
-	"contrib",
+	"contrib.examples.demo",
     "podman.api.adapter_utils",
     "podman.api.cached_property",
     "podman.api.client",
@@ -162,6 +156,8 @@ module = [
     "podman.domain.images_manager",
     "podman.domain.manifests",
     "podman.domain.pods",
-    "podman.domain.registry_data"
+    "podman.domain.registry_data",
+    "podman.domain.secrets",
+    "podman.domain.volume"
 ]
 ignore_errors = true
