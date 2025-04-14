@@ -148,7 +148,7 @@ exclude = '''
     ^podman/domain/images_build\.py$ |
     ^podman/domain/manager\.py$ |
     ^podman/domain/pods\.py$ |
-    ^podman/domain/registry_data\.py$
+    ^podman/domain/registry_data\.py$ |
+    ^contrib/.*
 )
 '''
-
