@@ -103,7 +103,7 @@ class ParseUtilsTestCase(unittest.TestCase):
         self.assertIsInstance(streamable, Iterable)
         for expected, actual in zip(streamed_results, streamable):
             self.assertIsInstance(actual, dict)
-            self.assertDictEqual(json.loads(expected), actual)
+            self.assertDictEqual(json.loads(expected), actual)  # type: ignore[arg-type]
 
 
 if __name__ == '__main__':

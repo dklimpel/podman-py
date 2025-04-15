@@ -85,6 +85,7 @@ def _filter_values(mapping: Mapping[str, Any], recursion=False) -> dict[str, Any
             continue
 
         # depending on type we need details...
+        proposal: Any
         if isinstance(value, collections.abc.Mapping):
             proposal = _filter_values(value, recursion=True)
         elif isinstance(value, collections.abc.Iterable) and not isinstance(value, str):

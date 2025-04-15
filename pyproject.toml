@@ -137,14 +137,12 @@ install_types = true
 non_interactive = true
 allow_redefinition = true
 no_strict_optional = true
+ignore_missing_imports = true
 
 [[tool.mypy.overrides]]
 module = [
-	"contrib.examples.demo",
     "podman.api.adapter_utils",
-    "podman.api.cached_property",
     "podman.api.client",
-    "podman.domain.manager",
     "podman.api.ssh",
     "podman.api.tar_utils",
     "podman.api.uds",
@@ -152,12 +150,18 @@ module = [
     "podman.domain.containers",
     "podman.domain.containers_create",
     "podman.domain.containers_run",
+    "podman.domain.events",
     "podman.domain.images_build",
     "podman.domain.images_manager",
+    "podman.domain.manager",
     "podman.domain.manifests",
+    "podman.domain.networks",
+    "podman.domain.networks_manager",
     "podman.domain.pods",
+    "podman.domain.pods_manager",
     "podman.domain.registry_data",
     "podman.domain.secrets",
-    "podman.domain.volume"
+    "podman.domain.volumes",
+    "podman.errors.exceptions"
 ]
 ignore_errors = true

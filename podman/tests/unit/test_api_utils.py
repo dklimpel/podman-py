@@ -134,7 +134,7 @@ class TestUtilsCase(unittest.TestCase):
         self.assertEqual(actual, '{"Boolean": false}')
 
     def test_prepare_body_embedded(self) -> None:
-        payload = {
+        payload: dict[str, Any] = {
             "String": "",
             "Integer": None,
             "Boolean": False,
