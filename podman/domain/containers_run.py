@@ -73,7 +73,7 @@ class RunMixin:  # pylint: disable=too-few-public-methods
             command = [command]
 
         try:
-            container = self.create(image=image_id, command=command, **kwargs)  # type: ignore[attr-defined]
+            container: Container = self.create(image=image_id, command=command, **kwargs)  # type: ignore[attr-defined]
         except ImageNotFound:
             self.podman_client.images.pull(  # type: ignore[attr-defined]
                 image_id,
@@ -81,7 +81,7 @@ class RunMixin:  # pylint: disable=too-few-public-methods
                 platform=kwargs.get("platform"),
                 policy=kwargs.get("policy", "missing"),
             )
-            container = self.create(image=image_id, command=command, **kwargs)  # type: ignore[attr-defined]
+            container: Container = self.create(image=image_id, command=command, **kwargs)  # type: ignore[attr-defined]
 
         container.start()
         container.reload()
