@@ -147,7 +147,6 @@ module = [
     "podman.domain.manager",
     "podman.domain.manifests",
     "podman.domain.networks",
-    "podman.domain.networks_manager",
     "podman.domain.pods_manager",
     "podman.domain.registry_data",
     "podman.errors.exceptions"
