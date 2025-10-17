@@ -17,6 +17,9 @@ from podman.domain.containers import Container
 from podman.domain.containers_manager import ContainersManager
 from podman.domain.manager import PodmanResource
 
+if TYPE_CHECKING:
+    from podman.domain.networks_manager import NetworksManager
+
 logger = logging.getLogger("podman.networks")
 
 
@@ -26,6 +29,8 @@ class Network(PodmanResource):
     Attributes:
         attrs (dict[str, Any]): Attributes of Network reported from Podman service
     """
+
+    manager = "NetworksManager"
 
     @property
     def id(self):  # pylint: disable=invalid-name
