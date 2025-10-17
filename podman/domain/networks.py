@@ -11,7 +11,7 @@ import hashlib
 import json
 import logging
 from contextlib import suppress
-from typing import Optional, Union
+from typing import Optional, Union, TYPE_CHECKING
 
 from podman.domain.containers import Container
 from podman.domain.containers_manager import ContainersManager
