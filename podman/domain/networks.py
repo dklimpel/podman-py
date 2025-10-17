@@ -110,7 +110,7 @@ class Network(PodmanResource):
         }
 
         data = {"Container": container, "EndpointConfig": endpoint_config}
-        data = {k: v for (k, v) in data.items() if not (v is None or len(v) == 0)}
+        data = {k: v for (k, v) in data.items() if not (v is None or len(v) == 0)}  # type: ignore[arg-type]
 
         response = self.client.post(
             f"/networks/{self.name}/connect",
