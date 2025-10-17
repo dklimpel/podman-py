@@ -150,8 +150,6 @@ module = [
     "podman.domain.networks_manager",
     "podman.domain.pods_manager",
     "podman.domain.registry_data",
-    "podman.domain.secrets",
-    "podman.domain.volumes",
     "podman.errors.exceptions"
 ]
 ignore_errors = true
