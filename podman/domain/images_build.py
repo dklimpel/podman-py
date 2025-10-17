@@ -13,6 +13,7 @@ from collections.abc import Iterator
 import itertools
 
 from podman import api
+from podman.api.client import _Params
 from podman.domain.images import Image
 from podman.errors import BuildError, PodmanError, ImageNotFound
 
@@ -80,7 +81,7 @@ class BuildMixin:
             TypeError: when neither path nor fileobj is not specified
         """
 
-        params = self._render_params(kwargs)
+        params: _Params = self._render_params(kwargs)
 
         body = None
         path = None

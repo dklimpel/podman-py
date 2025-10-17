@@ -33,7 +33,7 @@ _Data = Union[
 """Type alias for request data parameter."""
 
 _Params = Union[None, bytes, Mapping[str, Any]]
-"""Type alias for request url parameter."""
+"""Type alias for request query parameter."""
 
 _Timeout = Union[None, float, tuple[float, float], tuple[float, None]]
 """Type alias for request timeout parameter."""
