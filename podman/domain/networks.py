@@ -30,7 +30,7 @@ class Network(PodmanResource):
         attrs (dict[str, Any]): Attributes of Network reported from Podman service
     """
 
-    manager = "NetworksManager"
+    manager: "NetworksManager"
 
     @property
     def id(self):  # pylint: disable=invalid-name
